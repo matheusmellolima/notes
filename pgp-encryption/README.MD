@@ -1,4 +1,3 @@
-
 # PGP Encryption with Python
 
 PGP (Pretty Good Privacy - great name isn’t it?) is a program for encryption that provides cryptographic privacy and authentication for data communication. PGP is used for signing, encrypting, and decrypting texts, e-mails, files, directories, and whole disk partitions and to increase the security of e-mail communications.
