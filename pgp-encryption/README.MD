@@ -1,5 +1,5 @@
 
-# PGP Encryption
+# PGP Encryption with Python
 
 PGP (Pretty Good Privacy - great name isn’t it?) is a program for encryption that provides cryptographic privacy and authentication for data communication. PGP is used for signing, encrypting, and decrypting texts, e-mails, files, directories, and whole disk partitions and to increase the security of e-mail communications.
 
@@ -9,25 +9,9 @@ GnuPG is a free implementation of the OpenPGP standard that allows encryption an
 
 ## Environment setup
 
-We are going to use the `python-gnupg` library. 
+Python is required for this, so you may want to have it installed before going into this guide. 
 
-> ⚠️ For Windows users, I couldn't install GnuPG binaries on my machine because of many different reasons. The Python GnuPG library doesn’t require you to have binaries installed, but if you need to have it, below you can find instructions on how to setup WSL environment for GnuPG.
-
-## WSL setup
-
-When using WSL for the first time, I had some issues when running `apt update` or `apt upgrade`.
-
-To move forward, I needed to edit a file with the command `sudo nano /etc/resolv.conf` by including a line like this `nameserver 8.8.8.8`.
-
-Run Update: `sudo apt update`
-
-Run Upgrade: `sudo apt upgrade`
-
-Install Python on WSL: `sudo apt install python3 python3-pip ipython3`
-
-Install GnuPG Binaries: `sudo apt install gnupg` and `sudo apt install -y ca-certificates wget`
-
-Install python-gnupg library: `pip3 install python-gnupg`
+We are going to use the `python-gnupg` library. To install it, run: `pip install python-gnupg`. The Python GnuPG library doesn’t require GnuPG binaries, so after installing Python and GnuPG library, you are all set.
 
 ## Using the Python GnuPG library
 
@@ -140,6 +124,10 @@ verified = gpg.verify(signed_data.data)  # bool
 
 ## Using the GPG command line
 
+For this part, you need GnuPG binaries installed. You can find instructions [here](https://www.gnupg.org/download/).
+
+> ⚠️ For Windows users, I couldn't install GnuPG binaries on my machine because of many different reasons. Below you can find instructions on how to setup WSL environment for GnuPG.
+
 To list keys you can use: `gpg --list-keys`
 
 To delete a key: `gpg --delete-key <fingerprint>`
@@ -155,6 +143,22 @@ To import a new key: `gpg --import <path/to/key.asc>`
 To generate a new public and secret key: `gpg --full-generate-key`
 
 > ⚠️ When adding a new secret key, it will require you to have its passphrase.
+
+### WSL setup for GnuPG
+
+When using WSL for the first time, I had some issues when running `apt update` or `apt upgrade`.
+
+To move forward, I needed to edit a file with the command `sudo nano /etc/resolv.conf` by including a line like this `nameserver 8.8.8.8`.
+
+Run Update: `sudo apt update`
+
+Run Upgrade: `sudo apt upgrade`
+
+Install Python on WSL: `sudo apt install python3 python3-pip ipython3`
+
+Install GnuPG Binaries: `sudo apt install gnupg` and `sudo apt install -y ca-certificates wget`
+
+Install python-gnupg library: `pip3 install python-gnupg`
 
 ## References
 
