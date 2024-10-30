@@ -134,7 +134,7 @@ To delete a secret key: `gpg --delete-secret-key <fingerprint>`
 
 > ⚠️ You will need a fingerprint which you can get it by listing the keys.
 > 
-> There are some issues when deleting a key, because you need to revoke them before deleting. So be cautious. [Here](https://stackoverflow.com/questions/73293254/how-to-delete-gpg-keys-no-longer-needed) you can find more information about it.
+> There are some issues when deleting a key, because you need to revoke them before deleting. So be cautious and take a look at [this](https://stackoverflow.com/questions/73293254/how-to-delete-gpg-keys-no-longer-needed) before deleting your production keys.
 
 To import a new key: `gpg --import <path/to/key.asc>`
 
@@ -165,6 +165,5 @@ Here are some recommended documents and tutorials I used when learning this tech
 * [📃 Pretty Good Privacy](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 * [📃 GNU Privacy Guard](https://en.wikipedia.org/wiki/GNU_Privacy_Guard)
 * [📃 GnuPG](https://gnupg.org/ )
-* [📃 GnuPG Documentation](https://gnupg.readthedocs.io/en/latest/)
 * [📃 Python GnuPG Documentation](https://gnupg.readthedocs.io/en/latest/)
 * [▶️ GPG/PGP Free Data Encryption with Python](https://youtu.be/9NiPwvLCDpM)
