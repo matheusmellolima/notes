@@ -118,7 +118,7 @@ with open('/path/to/an/unsigned/data.txt', 'rb') as file:
 
 ### Verifying signature
 ```py
-verified = gpg.verify(signed_data.data)  # bool
+verified = gpg.verify(signed_data.data)  # this returns a boolean
 ```
 
 ## Using the GPG command line
