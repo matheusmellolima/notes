@@ -1,16 +1,16 @@
 # PGP Encryption with Python
 
-PGP (Pretty Good Privacy - great name isn’t it?) is a program for encryption that provides cryptographic privacy and authentication for data communication. PGP is used for signing, encrypting, and decrypting texts, e-mails, files, directories, and whole disk partitions and to increase the security of e-mail communications.
+[PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) (Pretty Good Privacy - great name isn’t it?) is a program for encryption that provides cryptographic privacy and authentication for data communication. PGP is used for signing, encrypting, and decrypting texts, e-mails, files, directories, and whole disk partitions and to increase the security of e-mail communications.
 
 PGP is actually owned by Symantec, so it’s not free. That’s why OpenPGP exists. 
 
-GnuPG is a free implementation of the OpenPGP standard that allows encryption and signing of data and communications. The OpenPGP defines standard formats for encrypted messages, signatures and certificates for exchanging public keys. It’s important to mention that this program serves as a framework to manage encryption, so in other words, PGP encryption doesn’t stand for an encryption algorithm. However, it can leverage encryption algorithms like the RSA algorithm.
+[GnuPG](https://gnupg.org/) is a free implementation of the OpenPGP standard that allows encryption and signing of data and communications. The OpenPGP defines standard formats for encrypted messages, signatures and certificates for exchanging public keys. It’s important to mention that this program serves as a framework to manage encryption, so in other words, PGP encryption doesn’t stand for an encryption algorithm. However, it can leverage encryption algorithms like the RSA algorithm.
 
 ## Environment setup
 
 Python is required for this, so you may want to have it installed before going into this guide. 
 
-We are going to use the `python-gnupg` library. To install it, run: `pip install python-gnupg`. The Python GnuPG library doesn’t require GnuPG binaries, so after installing Python and GnuPG library, you are all set.
+We are going to use the `python-gnupg` library (you find the documentation [here](https://gnupg.readthedocs.io/en/latest/)). To install it, run: `pip install python-gnupg`. The Python GnuPG library doesn’t require GnuPG binaries, so after installing Python and GnuPG library, you are all set.
 
 ## Using the Python GnuPG library
 
