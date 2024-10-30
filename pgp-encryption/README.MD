@@ -111,10 +111,9 @@ with open('/path/to/a/file.encrypted', 'rb') as file:
 
 You can also use this library to sign documents and verify signature, that way you can make sure the document you’ve received is really from the “person” you expected to.
 
-```
+```py
 with open('/path/to/an/unsigned/data.txt', 'rb') as file:
     signed_data = gpg.sign_file(file)
-
 ```
 
 ### Verifying signature
